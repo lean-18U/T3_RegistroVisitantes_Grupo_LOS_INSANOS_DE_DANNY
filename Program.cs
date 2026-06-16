@@ -67,8 +67,27 @@ class Program
     break;
 
                 case 2:
-                    Console.WriteLine("Estamos agregando cosas");
-                    break;
+    if (total == 0)
+    {
+        Console.WriteLine("No hay visitantes registrados");
+    }
+    else
+    {
+        Console.WriteLine("\nLISTA DE VISITANTES");
+
+        for (int i = 0; i < total; i++)
+        {
+            Console.WriteLine("\n------------------------");
+            Console.WriteLine("Codigo: " + codigos[i]);
+            Console.WriteLine("Nombre: " + nombres[i]);
+            Console.WriteLine("Departamento: " + departamentos[i]);
+            Console.WriteLine("Cantidad de personas: " + cantidadPersonas[i]);
+            Console.WriteLine("Motivo: " + motivos[i]);
+            Console.WriteLine("Hora ingreso: " + horasIngreso[i]);
+            Console.WriteLine("Hora salida: " + horasSalida[i]);
+        }
+    }
+    break;
 
                 case 3:
                     Console.WriteLine("Estamos agregando cosas");
