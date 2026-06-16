@@ -1,17 +1,25 @@
 ﻿using System;
-
 class Program
 {
+    const int MAX = 100;
+    static string[] codigos = new string[MAX];
+    static string[] nombres = new string[MAX];
+    static int[] departamentos = new int[MAX];
+    static int[] cantidadPersonas = new int[MAX];
+    static string[] motivos = new string[MAX];
+    static string[] horasIngreso = new string[MAX];
+    static string[] horasSalida = new string[MAX];
+    static int total = 0;
     static void Main()
     {
         int opcion;
-
         do
         {
-            Console.WriteLine("----------REGISTRO DE VISITANTES----------");
+            Console.Clear();
+            Console.WriteLine("---------REGISTRO DE VISITANTES -----------");
             Console.WriteLine("1. Registrar visitante");
             Console.WriteLine("2. Mostrar visitantes");
-            Console.WriteLine("3. Buscar visitante por código");
+            Console.WriteLine("3. Buscar visitante por codigo");
             Console.WriteLine("4. Modificar visitante");
             Console.WriteLine("5. Insertar visitante");
             Console.WriteLine("6. Eliminar visitante");
@@ -19,8 +27,56 @@ class Program
             Console.WriteLine("8. Mostrar resumen");
             Console.WriteLine("9. Salir");
 
-            Console.Write("Seleccione una opción: ");
+            Console.Write("\nSeleccione una opción: ");
             opcion = Convert.ToInt32(Console.ReadLine());
+
+            switch (opcion)
+            {
+                case 1:
+                    Console.WriteLine("Estamos agregando cosas");
+                    break;
+
+                case 2:
+                    Console.WriteLine("Estamos agregando cosas");
+                    break;
+
+                case 3:
+                    Console.WriteLine("Estamos agregando cosas");
+                    break;
+
+                case 4:
+                    Console.WriteLine("Estamos agregando cosas");
+                    break;
+
+                case 5:
+                    Console.WriteLine("Estamos agregando cosas");
+                    break;
+
+                case 6:
+                    Console.WriteLine("Estamos agregando cosas");
+                    break;
+
+                case 7:
+                    Console.WriteLine("Estamos agregando cosas");
+                    break;
+
+                case 8:
+                    Console.WriteLine("Estamos agregando cosas");
+                    break;
+
+                case 9:
+                    Console.WriteLine("Saliendo del sistema");
+                    break;
+
+                default:
+                    Console.WriteLine("Opcion no valida");
+                    break;
+            }
+            if (opcion != 9)
+            {
+                Console.WriteLine("\nPresione una tecla para continuar porfavor");
+                Console.ReadKey();
+            }
 
         } while (opcion != 9);
     }
