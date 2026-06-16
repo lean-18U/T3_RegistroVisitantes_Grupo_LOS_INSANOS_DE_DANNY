@@ -21,7 +21,7 @@ class Program
             Console.WriteLine("2. Mostrar visitantes");
             Console.WriteLine("3. Buscar visitante por codigo");
             Console.WriteLine("4. Modificar visitante");
-            Console.WriteLine("5. Insertar visitante");
+            Console.WriteLine("5. Insertar visitante en la lista");
             Console.WriteLine("6. Eliminar visitante");
             Console.WriteLine("7. Ordenar visitantes");
             Console.WriteLine("8. Mostrar resumen");
@@ -202,8 +202,58 @@ class Program
     break;
 
                 case 5:
-                    Console.WriteLine("Estamos agregando cosas");
-                    break;
+    if (total >= MAX)
+    {
+        Console.WriteLine("No hay espacio para insertar más visitantes");
+    }
+    else
+    {
+        Console.Write("Ingrese la posición donde desea insertar (0 a " + total + "): ");
+        int posInsertar = Convert.ToInt32(Console.ReadLine());
+
+        if (posInsertar >= 0 && posInsertar <= total)
+        {
+            for (int i = total; i > posInsertar; i--)
+            {
+                codigos[i] = codigos[i - 1];
+                nombres[i] = nombres[i - 1];
+                departamentos[i] = departamentos[i - 1];
+                cantidadPersonas[i] = cantidadPersonas[i - 1];
+                motivos[i] = motivos[i - 1];
+                horasIngreso[i] = horasIngreso[i - 1];
+                horasSalida[i] = horasSalida[i - 1];
+            }
+
+            Console.Write("Ingrese codigo: ");
+            codigos[posInsertar] = Console.ReadLine();
+
+            Console.Write("Ingrese nombre del visitante: ");
+            nombres[posInsertar] = Console.ReadLine();
+
+            Console.Write("Ingrese departamento: ");
+            departamentos[posInsertar] = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Cantidad de personas: ");
+            cantidadPersonas[posInsertar] = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Motivo de la visita: ");
+            motivos[posInsertar] = Console.ReadLine();
+
+            Console.Write("Hora de ingreso: ");
+            horasIngreso[posInsertar] = Console.ReadLine();
+
+            Console.Write("Hora de salida: ");
+            horasSalida[posInsertar] = Console.ReadLine();
+
+            total++;
+            Console.WriteLine("\nVisitante insertado correctamente en la posición " + posInsertar);
+        }
+        else
+        {
+            Console.WriteLine("Posición fuera de rango válido");
+        }
+    }
+    break;
 
                 case 6:
                     Console.WriteLine("Estamos agregando cosas");
