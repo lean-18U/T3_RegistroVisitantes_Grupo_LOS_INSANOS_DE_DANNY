@@ -35,7 +35,7 @@ class Program
                 case 1:
     if (total < MAX)
     {
-        Console.Write("Ingrese codigo: ");
+        Console.Write("Ingrese el DNI del visitante: ");
         codigos[total] = Console.ReadLine();
 
         if (codigos[total] == "")
@@ -102,7 +102,7 @@ class Program
         for (int i = 0; i < total; i++)
         {
             Console.WriteLine("\n------------------------");
-            Console.WriteLine("Codigo: " + codigos[i]);
+            Console.WriteLine("DNI: " + codigos[i]);
             Console.WriteLine("Nombre: " + nombres[i]);
             Console.WriteLine("Departamento: " + departamentos[i]);
             Console.WriteLine("Cantidad de personas: " + cantidadPersonas[i]);
@@ -120,7 +120,7 @@ class Program
     }
     else
     {
-        Console.Write("Ingrese el código a buscar: ");
+        Console.Write("Ingrese el DNI del visitante a buscar: ");
         string codBuscar = Console.ReadLine();
         int posEncontrada = -1;
 
@@ -157,7 +157,7 @@ class Program
     }
     else
     {
-        Console.Write("Ingrese el código del visitante a modificar: ");
+        Console.Write("Ingrese el DNI del visitante a modificar: ");
         string codModificar = Console.ReadLine();
         int posModificar = -1;
 
@@ -224,7 +224,7 @@ class Program
                 horasSalida[i] = horasSalida[i - 1];
             }
 
-            Console.Write("Ingrese codigo: ");
+            Console.Write("Ingrese el DNI del Visitante: ");
             codigos[posInsertar] = Console.ReadLine();
 
             Console.Write("Ingrese nombre del visitante: ");
