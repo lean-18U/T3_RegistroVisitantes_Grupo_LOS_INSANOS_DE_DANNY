@@ -151,8 +151,55 @@ class Program
     break;
 
                 case 4:
-                    Console.WriteLine("Estamos agregando cosas");
-                    break;
+    if (total == 0)
+    {
+        Console.WriteLine("No hay visitantes registrados para modificar");
+    }
+    else
+    {
+        Console.Write("Ingrese el código del visitante a modificar: ");
+        string codModificar = Console.ReadLine();
+        int posModificar = -1;
+
+        for (int i = 0; i < total; i++)
+        {
+            if (codigos[i] == codModificar)
+            {
+                posModificar = i;
+                break;
+            }
+        }
+
+        if (posModificar != -1)
+        {
+            Console.WriteLine("\nModificando datos de: " + nombres[posModificar]);
+            
+            Console.Write("Nuevo nombre (Actual: " + nombres[posModificar] + "): ");
+            nombres[posModificar] = Console.ReadLine();
+
+            Console.Write("Nuevo departamento (Actual: " + departamentos[posModificar] + "): ");
+            departamentos[posModificar] = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Nueva cantidad de personas (Actual: " + cantidadPersonas[posModificar] + "): ");
+            cantidadPersonas[posModificar] = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Nuevo motivo: ");
+            motivos[posModificar] = Console.ReadLine();
+
+            Console.Write("Nueva hora de ingreso: ");
+            horasIngreso[posModificar] = Console.ReadLine();
+
+            Console.Write("Nueva hora de salida: ");
+            horasSalida[posModificar] = Console.ReadLine();
+
+            Console.WriteLine("\nVisitante modificado correctamente");
+        }
+        else
+        {
+            Console.WriteLine("Visitante no encontrado");
+        }
+    }
+    break;
 
                 case 5:
                     Console.WriteLine("Estamos agregando cosas");
