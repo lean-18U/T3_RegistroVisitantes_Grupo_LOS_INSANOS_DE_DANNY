@@ -38,14 +38,38 @@ class Program
         Console.Write("Ingrese codigo: ");
         codigos[total] = Console.ReadLine();
 
+        if (codigos[total] == "")
+        {
+            Console.WriteLine("El codigo no puede estar vacio");
+            break;
+        }
+
         Console.Write("Ingrese nombre del visitante: ");
         nombres[total] = Console.ReadLine();
+
+        if (nombres[total] == "")
+        {
+            Console.WriteLine("El nombre no puede estar vacio");
+            break;
+        }
 
         Console.Write("Ingrese departamento: ");
         departamentos[total] = Convert.ToInt32(Console.ReadLine());
 
+        if (departamentos[total] <= 0)
+        {
+            Console.WriteLine("Departamento invalido");
+            break;
+        }
+
         Console.Write("Cantidad de personas: ");
         cantidadPersonas[total] = Convert.ToInt32(Console.ReadLine());
+
+        if (cantidadPersonas[total] <= 0)
+        {
+            Console.WriteLine("La cantidad debe ser mayor a 0");
+            break;
+        }
 
         Console.Write("Motivo de la visita: ");
         motivos[total] = Console.ReadLine();
