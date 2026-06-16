@@ -8,23 +8,23 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {},
+    "C:\\Users\\Juanr\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Test_casa\\T3\\T3_MATI\\T3_MATI.csproj",
+      "projectUniqueName": "C:\\Users\\Juanr\\OneDrive\\Desktop\\T3\\T3_RegistroVisitantes_Grupo_LOS_INSANOS_DE_DANNY\\T3_MATI.csproj",
       "projectName": "T3_MATI",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\Test_casa\\T3\\T3_MATI\\T3_MATI.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\Test_casa\\T3\\T3_MATI\\obj\\",
+      "projectPath": "C:\\Users\\Juanr\\OneDrive\\Desktop\\T3\\T3_RegistroVisitantes_Grupo_LOS_INSANOS_DE_DANNY\\T3_MATI.csproj",
+      "packagesPath": "C:\\Users\\Juanr\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Juanr\\OneDrive\\Desktop\\T3\\T3_RegistroVisitantes_Grupo_LOS_INSANOS_DE_DANNY\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Juanr\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

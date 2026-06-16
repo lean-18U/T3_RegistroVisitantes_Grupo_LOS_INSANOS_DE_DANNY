@@ -5,7 +5,7 @@ class Program
     static string[] codigos = new string[MAX];
     static string[] nombres = new string[MAX];
     static int[] departamentos = new int[MAX];
-    static int[] cantidadPersonas = new int[MAX];
+    static int[] cantidadPersonas = new int[MAX];    
     static string[] motivos = new string[MAX];
     static string[] horasIngreso = new string[MAX];
     static string[] horasSalida = new string[MAX];
@@ -114,8 +114,41 @@ class Program
     break;
 
                 case 3:
-                    Console.WriteLine("Estamos agregando cosas");
-                    break;
+     if (total == 0)
+    {
+        Console.WriteLine("No hay visitantes registrados");
+    }
+    else
+    {
+        Console.Write("Ingrese el código a buscar: ");
+        string codBuscar = Console.ReadLine();
+        int posEncontrada = -1;
+
+        for (int i = 0; i < total; i++)
+        {
+            if (codigos[i] == codBuscar)
+            {
+                posEncontrada = i;
+                break;
+            }
+        }
+
+        if (posEncontrada != -1)
+        {
+            Console.WriteLine("\n--- VISITANTE ENCONTRADO ---");
+            Console.WriteLine("Nombre: " + nombres[posEncontrada]);
+            Console.WriteLine("Departamento: " + departamentos[posEncontrada]);
+            Console.WriteLine("Cantidad de personas: " + cantidadPersonas[posEncontrada]);
+            Console.WriteLine("Motivo: " + motivos[posEncontrada]);
+            Console.WriteLine("Hora ingreso: " + horasIngreso[posEncontrada]);
+            Console.WriteLine("Hora salida: " + horasSalida[posEncontrada]);
+        }
+        else
+        {
+            Console.WriteLine("Visitante no encontrado");
+        }
+    }
+    break;
 
                 case 4:
                     Console.WriteLine("Estamos agregando cosas");
