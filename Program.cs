@@ -260,7 +260,7 @@ class Program
                     break;
 
                 case 7:
-                    Console.WriteLine("Estamos agregando cosas");
+                    OrdenarVisitantes();
                     break;
 
                 case 8:
@@ -324,5 +324,52 @@ class Program
         {
             Console.WriteLine("Visitante no encontrado");
         }
+    }
+
+    static void OrdenarVisitantes()
+    {
+        if (total < 2)
+        {
+            Console.WriteLine("No se puede organizar ingrese mas visitantes");
+            return;
+        }
+
+        for (int i = 0; i < total - 1; i++)
+        {
+            for (int j = 0; j < total -1 -i; j++)
+            {
+                if (departamentos[j] > departamentos[j + 1])
+                {
+                    int tempCant = cantidadPersonas[j];
+                    cantidadPersonas[j] = cantidadPersonas[j + 1];
+                    cantidadPersonas[j + 1] = tempCant;
+
+                    string tempCod = codigos[j];
+                    codigos[j] = codigos[j + 1];
+                    codigos[j + 1] = tempCod;
+
+                    string tempNom = nombres[j];
+                    nombres[j] = nombres[j + 1];
+                    nombres[j + 1] = tempNom;
+
+                    int tempDep = departamentos[j];
+                    departamentos[j] = departamentos[j + 1];
+                    departamentos[j + 1] = tempDep;
+
+                    string tempMot = motivos[j];
+                    motivos[j] = motivos[j + 1];
+                    motivos[j + 1] = tempMot;
+
+                    string tempIng = horasIngreso[j];
+                    horasIngreso[j] = horasIngreso[j + 1];
+                    horasIngreso[j + 1] = tempIng;
+
+                    string tempSal = horasSalida[j];
+                    horasSalida[j] = horasSalida[j + 1];
+                    horasSalida[j + 1] = tempSal;
+                }
+            }
+        }
+        Console.WriteLine("\nVisitantes organizados correctamente por departamento");
     }
 }
