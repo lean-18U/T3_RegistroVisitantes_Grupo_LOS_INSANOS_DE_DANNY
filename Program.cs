@@ -256,7 +256,7 @@ class Program
     break;
 
                 case 6:
-                    Console.WriteLine("Estamos agregando cosas");
+                    EliminarVisitante();
                     break;
 
                 case 7:
@@ -282,5 +282,47 @@ class Program
             }
 
         } while (opcion != 9);
+    }
+    static void EliminarVisitante()
+    {
+        if (total == 0)
+        {
+            Console.WriteLine("No hay visitantes registrados para eliminar");
+            return;
+        }
+
+        Console.Write("Ingrese el DNI del visitante a eliminar: ");
+        string codEliminar = Console.ReadLine();
+        int posEliminar = -1;
+
+        for (int i = 0; i < total; i++)
+        {
+            if (codigos[i] == codEliminar)
+            {
+                posEliminar = i;
+                break;
+            }
+        }
+
+        if (posEliminar != -1)
+        {
+            for (int i = posEliminar; i < total - 1; i++)
+            {
+                codigos[i] = codigos[i + 1];
+                nombres[i] = nombres[i + 1];
+                departamentos[i] = departamentos[i + 1];
+                cantidadPersonas[i] = cantidadPersonas[i + 1];
+                motivos[i] = motivos[i + 1];
+                horasIngreso[i] = horasIngreso[i + 1];
+                horasSalida[i] = horasSalida[i + 1];
+            }
+
+            total--;
+            Console.WriteLine("\nVisitante eliminado Correctamente");
+        }
+        else
+        {
+            Console.WriteLine("Visitante no encontrado");
+        }
     }
 }
