@@ -33,8 +33,38 @@ class Program
             switch (opcion)
             {
                 case 1:
-                    Console.WriteLine("Estamos agregando cosas");
-                    break;
+    if (total < MAX)
+    {
+        Console.Write("Ingrese codigo: ");
+        codigos[total] = Console.ReadLine();
+
+        Console.Write("Ingrese nombre del visitante: ");
+        nombres[total] = Console.ReadLine();
+
+        Console.Write("Ingrese departamento: ");
+        departamentos[total] = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Cantidad de personas: ");
+        cantidadPersonas[total] = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Motivo de la visita: ");
+        motivos[total] = Console.ReadLine();
+
+        Console.Write("Hora de ingreso: ");
+        horasIngreso[total] = Console.ReadLine();
+
+        Console.Write("Hora de salida: ");
+        horasSalida[total] = Console.ReadLine();
+
+        total++;
+
+        Console.WriteLine("\nVisitante registrado correctamente");
+    }
+    else
+    {
+        Console.WriteLine("No hay espacio para mas visitantes");
+    }
+    break;
 
                 case 2:
                     Console.WriteLine("Estamos agregando cosas");
