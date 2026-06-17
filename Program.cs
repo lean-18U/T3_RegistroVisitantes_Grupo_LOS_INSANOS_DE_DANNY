@@ -185,13 +185,30 @@ static void RegistrarVisitante()
         Console.WriteLine("No hay espacio para más visitantes");
         return;
     }
+    
+    do
+    {
+            Console.Write("Ingrese DNI: ");
+            codigos[total] = Console.ReadLine();
 
-    Console.Write("Ingrese DNI: ");
-    codigos[total] = Console.ReadLine();
+            if (codigos[total] == "")
+            {
+                Console.WriteLine("Campo Obligatorio: Ingrese el DNI");
+            }
+    }while(codigos[total] == "");
+    
+    do
+    {
+            Console.Write("Ingrese nombre: ");
+            nombres[total] = Console.ReadLine();
 
-    Console.Write("Ingrese nombre: ");
-    nombres[total] = Console.ReadLine();
+            if (nombres[total] == "")
+            {
+                Console.WriteLine("Campo Obligatorio: Ingrese el nombre");
+            }
+    }while(nombres[total] == "");
 
+    
     Console.Write("Ingrese departamento: ");
     departamentos[total] = Convert.ToInt32(Console.ReadLine());
 
