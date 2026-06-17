@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("T3_MATI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+59344bd28ba068c3c4c1a70499407b0ec9cc7fd3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f53a87257646f84d0c8f5d9f44cc003e6b21f094")]
 [assembly: System.Reflection.AssemblyProductAttribute("T3_MATI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("T3_MATI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
