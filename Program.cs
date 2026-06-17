@@ -264,7 +264,7 @@ class Program
                     break;
 
                 case 8:
-                    Console.WriteLine("Estamos agregando cosas");
+                    MostrarResumen();
                     break;
 
                 case 9:
@@ -372,4 +372,36 @@ class Program
         }
         Console.WriteLine("\nVisitantes organizados correctamente por departamento");
     }
+    
+    static void MostrarResumen()
+    {
+        int sumaTotalPersonas = 0;
+        int mayorValor = cantidadPersonas[0];
+        int menorValor = cantidadPersonas[0];
+        int indiceMayor = 0;
+        int indiceMenor = 0;
+
+        for (int i = 0; i < total; i++ )
+        {
+            sumaTotalPersonas = sumaTotalPersonas + cantidadPersonas[i];
+
+            if (cantidadPersonas[i] > mayorValor)
+            {
+                mayorValor = cantidadPersonas[i];
+                indiceMayor = i;
+            }
+
+            if (cantidadPersonas[i] < menorValor)
+            {
+                menorValor = cantidadPersonas[i];
+                indiceMenor = i;
+            }
+        }
+
+        Console.WriteLine("\n--- RESUMEN DE VISITANTES ---");
+        Console.WriteLine("1. Total de visitantes registrados: " + total);
+        Console.WriteLine("2. Suma total de acompañantes: " + sumaTotalPersonas);
+        Console.WriteLine("3. Registro con MAYOR cantidad de acompañantes: " + nombres[indiceMayor] + " (DNI: " + codigos[indiceMayor] + ") con " + mayorValor + " acompañantes.");
+        Console.WriteLine("4. Registro con MENOR cantidad de acompañantes: " + nombres[indiceMenor] + " (DNI: " + codigos[indiceMenor] + ") con " + menorValor + " acompañantes.");
+    }    
 }
